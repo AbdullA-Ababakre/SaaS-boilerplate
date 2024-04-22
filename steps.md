@@ -3,5 +3,5 @@
 - init shadcn
 - add dark theme
 - change global style in the globals.css
-- auth
+- auth(luciedReact icons + emojiDb emojes)
  
