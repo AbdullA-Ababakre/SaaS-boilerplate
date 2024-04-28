@@ -1,10 +1,23 @@
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import React from "react";
 
-
-export default function Home() {
+export default function page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button variant="outline">Button</Button> 
-    </main>
+    <div className="space-y-10">
+      <div>
+        <h1 className="text-xl font-bold">Test links</h1>
+        <div className=" space-x-2">
+          <Link href="/dashboard" className="underline">
+            /dashboard
+          </Link>
+          <Link href="/profile" className=" underline">
+            /profile
+          </Link>
+          <Link href="/subscription" className=" underline">
+            /subscription
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
