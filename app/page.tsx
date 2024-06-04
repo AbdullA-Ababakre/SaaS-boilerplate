@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Price from "@/components/subscription/price";
 
 export default function page() {
   return (
@@ -18,6 +19,7 @@ export default function page() {
           </Link>
         </div>
       </div>
+      <Price />
     </div>
   );
 }

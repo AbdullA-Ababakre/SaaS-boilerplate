@@ -56,7 +56,8 @@ export async function middleware(request: NextRequest) {
   );
 
   const { data } = await supabase.auth.getSession();
-  const url = new URL(request.url);
+  // url of the current path 
+  const url = new URL(request.url); 
 
   if (data.session) {
     if (url.pathname === "/auth") {

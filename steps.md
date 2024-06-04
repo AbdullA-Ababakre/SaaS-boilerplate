@@ -57,10 +57,37 @@ create trigger on_auth_user_created
 
 - Import the react query for fetching 
 - set the typescript type
-- 
+
+
+## Payment(1:22)
+
+- Payment UI
+
+- Add products on the stripe 
+
+- Get the products stripe id and 
 
 
 
 
 
+
+````
+begin
+    insert into public.profiles(id,email,display_name,image_url)
+    values(
+      new.id,
+      new.email,
+      COALESCE(new.raw_user_meta_data ->> 'user_name',new.raw_user_meta_data ->> 'name'),
+      new.raw_user_meta_data ->> 'avatar_url'
+    );
+
+     insert into public.subscription(email)
+    values(
+      new.email
+    );
+
+    return new;
+end;
+````
  

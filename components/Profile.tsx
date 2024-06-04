@@ -39,6 +39,7 @@ export default function Profile() {
         }
     };
 
+
     return (
         <div>
             {!data?.id ? (
@@ -59,7 +60,7 @@ export default function Profile() {
                                 />
                             ) : (
                                 <div className="h-[50px] w-[50px] flex items-center justify-center ring-2 rounded-full text-2xl font-bold cursor-pointer">
-                                    <h1>{data.email[0]}</h1>
+                                    <h1>{data?.email?.[0]}</h1>
                                 </div>
                             )}
                         </>
@@ -74,7 +75,6 @@ export default function Profile() {
                     </DropdownMenuContent>
                 </DropdownMenu>
             )}
-
         </div>
     );
 }
