@@ -6,6 +6,7 @@ import Price from "@/components/subscription/price";
 
 export default function Page() {
     const { data: user, isLoading } = useUser();
+    console.log('data111', user);
     if (isLoading) {
         return <></>;
     }

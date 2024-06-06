@@ -5,7 +5,7 @@ export default function Post() {
     const getPost = async () => {
     	const supabase = supabaseBrowser();
     	const { data } = await supabase.from("post").select("*");
-    	console.log(data);
+    	console.log("data99",data);
     };
 
     useEffect(() => {
